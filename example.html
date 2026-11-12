@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Выбор этажа</title>
+</head>
+<body>
+  <label for="floor">Этаж</label>
+  <select id="floor">
+    <option value="1">Первый этаж</option>
+    <option value="2">Второй этаж</option>
+    <option value="3">Третий этаж</option>
+  </select>
+
+  <p id="result">Вы выбрали этаж 1</p>
+
+  <script>
+    const floor = document.getElementById('floor');
+    const result = document.getElementById('result');
+
+    floor.addEventListener('change', () => {
+      const selectedFloor = floor.value;
+      result.innerHTML = 'Вы выбрали этаж ' + selectedFloor;
+    });
+  </script>
+</body>
+</html>
